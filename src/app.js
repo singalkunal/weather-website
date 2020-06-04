@@ -7,7 +7,7 @@ const forecast = require('./utils/forecast')
 
 const app = express()
 
-PORT = 3000
+const PORT = process.env.PORT || 3000
 // express config paths
 const publicDirPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
@@ -46,7 +46,7 @@ app.get('/help', (req, res) => {
 app.get('/weather', (req, res) => {
     if(!req.query.address){
         return res.send({
-            error: 'Must provide and address'
+            error: 'Must provide an address'
         })
     }
 
