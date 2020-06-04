@@ -70,11 +70,7 @@ app.get('/weather', (req, res) => {
         })
 
     })
-    // res.send({
-    //     forecast: 'It is summer',
-    //     location: 'Philadelphia',
-    //     address: req.query.address
-    // })
+    
 })
 
 app.get('/help/*', (req, res) => {
